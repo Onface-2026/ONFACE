@@ -1,0 +1,578 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-teal: #017697;
+    --dark-teal: #017697;
+    --light-bg: #f4f4f4;
+    --white: #ffffff;
+        }
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Montserrat', sans-serif;
+            
+         }
+        
+body { 
+    background-color: var(--white); 
+    color: #333; 
+    line-height: 1.6;
+ }
+
+ 
+        
+.container {
+    max-width: 1480px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    }
+       
+h2 { 
+    color: white; 
+    text-align:left; 
+    font-size: 28px; 
+    margin-bottom: 30px; 
+    text-transform: uppercase; }
+
+
+/** CABEÇALHO **/
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 5%; 
+    background: var(--white); 
+    border-bottom: 1px solid #eee;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+.logo img { 
+    height: 60px; 
+}
+
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    gap: 120px; 
+}
+
+nav a { 
+    text-decoration: none; 
+    color: var(--primary-teal); 
+    font-weight: 700; 
+    font-size: 18px; 
+    
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.btn-top { 
+    background: var(--primary-teal); 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.btn-top:hover {
+    text-decoration: underline;
+}
+
+.form-icon {
+    width: 40px;
+    height: 40px;
+    flex: 1.2;
+    position: relative;
+    margin-left: 10px;
+    padding: 0 0 0 5;
+}
+
+
+
+@media(max-width:768px){
+
+    li{
+        display: none;
+    }
+
+    .hero-text{
+        padding-top: 40px;
+    }
+
+    .benefits-img{
+        display: none;
+    }
+
+    .equip{
+        color: #005b73;
+
+    }
+    
+
+}
+
+@media(max-width:1300px){
+     li {
+        display: none;
+     }
+}
+
+
+/** HERO **/
+.hero { 
+    background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #0a9ec6 25%,
+    #017697 65%,
+    #005b73 100%
+); 
+    display: flex; 
+    align-items: center; 
+    color: white; 
+    padding: 60px 0 0 5%; 
+    overflow: hidden; 
+}
+
+.hero-text { 
+    flex: 1; 
+    padding-bottom: 60px; 
+}
+
+.hero-text h1 { 
+    font-size: 55px; 
+    font-weight: 900; 
+    line-height: 1; 
+    text-transform: uppercase; 
+    margin: 20px 0;
+    font-size:clamp(35px,5vw,55px); 
+}
+
+.hero-img { 
+    flex: 1.2; 
+    position: relative; 
+}
+
+.hero-img img { 
+    width: 100%; 
+    border-bottom-left-radius: 80px; 
+    border-top-left-radius: 80px; 
+    display: block; 
+}
+
+@media(max-width:768px){
+
+.hero {
+    flex-direction:column;
+    padding:40px 20px;
+    text-align:center;
+}
+
+
+.hero-text h1 {
+    font-size:40px;
+}
+
+
+.hero-img img {
+    width:100%;
+    border-radius:40px;
+}
+}
+
+
+/** SOBRE NÓS **/
+.features {
+    padding: 60px 0; 
+}
+
+.feature-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    align-items: center;
+    margin-top: 20px;
+}
+
+.feature-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.container-features {
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+.sobre-icon {
+    width: 20px;
+}
+
+.card { 
+    border: 2px solid var(--primary-teal); 
+    border-radius: 15px; 
+    padding: 20px;
+    text-align: left; 
+}
+
+.card h3 { 
+    color: var(--primary-teal); 
+    font-size: 14px; 
+    margin-bottom: 10px; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; }
+
+  
+/** BENEFÍCIOS **/
+.benefits { 
+    padding: 40px 0; 
+    display: flex; 
+    align-items: center;
+     gap: 50px; 
+    }
+
+.benefits-img { 
+    flex: 1; 
+    text-align: center; 
+}
+
+.benefits-img img { 
+    width: 350px; 
+    opacity: 0.8; 
+}
+
+.benefits-list { 
+    flex: 1; 
+}
+
+.benefit-item { 
+    background: #e0e0e0; 
+    margin-bottom: 10px; 
+    padding: 12px 20px; 
+    border-radius: 5px; 
+    display: flex; 
+    justify-content: space-between; 
+    font-weight: bold; 
+    color: var(--primary-teal); 
+}
+
+@media(max-width:768px){
+
+.benefits {
+    flex-direction:column;
+    text-align:center;
+}
+
+
+.benefits-img img {
+    width:90%;
+}
+
+
+.benefits-list {
+    width:100%;
+}
+}
+
+
+/** SOBRE NÓS **/
+details {
+     background: #e0e0e0; 
+    margin-bottom: 10px; 
+    padding: 12px 20px; 
+    border-radius: 5px; 
+    display: flex; 
+    justify-content: space-between; 
+    font-weight: bold; 
+    color: var(--primary-teal); 
+}
+
+.detalhes {
+    color: black;
+}
+
+.p-benefits {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+
+
+/** COMO FUNCIONA **/
+.how-it-works { 
+    background: #ffffff; 
+    color: white; 
+    padding: 60px 0; 
+    text-align: center; 
+    margin-right: 0;
+}
+
+.how-it-works h2 { 
+    color: #005b73; 
+}
+
+.how-it-works p {
+    color: black;
+}
+
+.steps {  
+    justify-content: space-around; 
+    margin-top: 40px; 
+}
+
+.steps {
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.step { 
+    flex: 1; 
+    padding: 20px; 
+}
+
+.step-num { 
+    width: 40px; 
+    height: 40px; 
+    background: white; 
+    color: var(--primary-teal); 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 0 auto 20px; 
+    font-weight: bold;
+}
+
+.step img { 
+    width: 150px; 
+    height: 150px;
+    border-radius: 10px; 
+    margin-bottom: 15px; 
+    border: 2px solid white; 
+}
+
+@media(max-width:768px){
+
+.steps {
+    grid-template-columns:1fr;
+}
+
+
+.step img {
+    width:180px;
+    height:180px;
+}
+}
+
+
+/**  EQUIPE **/
+#equipe {
+    padding: 0;
+    margin-right: 0px;
+    align-items: center; 
+    color: white; 
+}
+
+.container-team { 
+    background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #0a9ec6 25%,
+    #017697 65%,
+    #005b73 100%
+); 
+    padding: 60px 0; 
+    text-align: center; 
+    width: 100%;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.member img { 
+    width: 160px; 
+    height: 200px;
+    border-radius: 15px; 
+    border: 3px solid #ddd; 
+}
+
+.equipe{
+    margin-left: 50px;
+}
+
+.equip {
+    margin-left: 50px;
+}
+
+.member h4 { 
+    margin-top: 10px; 
+    color: white; 
+    font-size: 14px; 
+}
+
+.member p { 
+    font-size: 11px; 
+    color: #dbdbdb; 
+}
+
+@media(max-width:768px){
+    .team-grid {
+        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+/** CALL TO ACTION **/
+.cta {
+    background: #005b73; 
+    color: white; 
+    padding: 60px 0; 
+}
+
+.cta-container { 
+    display: flex; 
+    align-items: center; 
+    gap: 50px; 
+}
+
+.cta-box { 
+    flex: 1; 
+    background: #ccc; 
+    height: 300px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 100px; color: #999; 
+    border-radius: 10px; 
+    margin-left: 60px;
+}
+
+.cta-box img {
+    flex: 1; 
+    background: #ccc; 
+    height: 300px;
+    height: 300px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    border-radius: 10px; 
+}
+
+.cta-content { 
+    flex: 1; 
+}
+.btn-demo { 
+    background: white; 
+    color: var(--primary-teal); 
+    padding: 15px 30px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: 900; 
+    display: inline-block; 
+    margin-top: 20px; 
+}
+
+.btn-demo:hover {
+    text-decoration: underline;
+}
+
+@media(max-width:768px){
+
+.cta-container {
+    flex-direction:column;
+}
+
+
+.cta-box {
+    margin-left:0;
+    width:100%;
+}
+
+
+.cta-box img {
+    width:100%;
+}
+
+}
+
+
+/** RODAPÉ **/
+footer { 
+    padding: 20px 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-top: 1px solid #eee;
+}
+
+.social-footer img { 
+    height: 25px; 
+    margin-left: 10px; 
+}
+
+@media(max-width:768px){
+
+footer {  
+    gap:20px;
+    text-align:center;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero,
+.benefits,
+.cta-container {
+    flex-direction:column;
+}
+
+
+.feature-grid,
+.steps {
+    grid-template-columns:1fr;
+}
+
+}
+
+.social-media {
+    border-radius: 10px;
+    width: 50px;
+}  
+
+.prod {
+    text-align: center;
+}
+
+.sobre {
+    color: #017697;
+    text-align: center;
+}
+
+.equipe {
+    color: #005b73;
+}
+
+.equip {
+    text-align: left;
+}

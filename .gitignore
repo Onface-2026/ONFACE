@@ -1,0 +1,11 @@
+config/
+conexao.php
+*.sql
+*.log
+uploads/
+*.log
+*.html
+.vscode/
+*.log
+Thumbs.db
+.Ds_Store

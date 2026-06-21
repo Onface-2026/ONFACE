@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(180deg, #8ad2d9 0%, #006680 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.container {
+    width: 90%;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 24px;
+    color: #005a70;
+    letter-spacing: -1px;
+    margin-top: -5px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-box {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+img {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.onface {
+    width: 120px;
+    height: 60px;
+}
+
+.welcome-section {
+    margin-bottom: 40px;
+}
+
+.welcome-section h1 {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.welcome-section p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;  
+        
+}
+
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #017697;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle { 
+    display: block; 
+    z-index: 1001; 
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #017697;
+    z-index: 1000;
+    transition: right 0.4s ease-in-out; 
+  }
+
+  .nav-links.active { 
+    right: 0; 
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  /* Animação do botão Hambúrguer para o X */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle.active .bar:nth-child(2) { 
+    opacity: 0; 
+  }
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+/* Responsividade: Menu lateral na direita */
+@media (max-width: 768px) {
+  .menu-toggle { 
+    display: block; 
+    z-index: 1001; /* Garante que o botão fique acima do menu */
+  }
+  
+  .nav-links {
+    display: flex; /* Mantém flex para alinhar os itens */
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px; /* Espaço para não cobrir o botão */
+    
+    /* Configuração da Barra Lateral */
+    position: fixed;
+    top: 0;
+    right: -300px; /* Esconde o menu totalmente para a direita */
+    width: 300px; /* Largura fixa da barra lateral */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    background-color: #017697;
+    z-index: 1000;
+    
+    /* Transição suave ao abrir e fechar */
+    transition: right 0.4s ease-in-out; 
+  }
+
+  /* Quando o JavaScript ativa o menu, ele desliza para a tela */
+  .nav-links.active { 
+    right: 0; 
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  /* Animação do botão Hambúrguer para o X */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle.active .bar:nth-child(2) { 
+    opacity: 0; 
+  }
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+
+
+
+
+.white-square {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 15px;        
+    margin-bottom: 10px;        
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);        
+}
+
+.white-square:hover {
+    cursor: pointer;
+}
+
+.icone-perfil {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    margin-top: 11px;
+    margin-left: 10px;
+}
+       
+.label {
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.label:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+.white-square {
+    width: 75px;
+    height: 75px;
+}
+.welcome-section h1 {
+font-size: 30px;
+}
+}
+
+.painel{
+    width:348px;
+    height:372px;
+    background:#ececec;
+}
