@@ -4,8 +4,8 @@ conexao.php
 *.log
 uploads/
 *.log
-*.html
 .vscode/
 *.log
 Thumbs.db
 .Ds_Store
+desktop.ini

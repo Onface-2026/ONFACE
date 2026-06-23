@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnFace Dashboard</title>
+
+    <link rel="stylesheet"
+href="perfil.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-area">
+               <img src="ONFACEorig.png" alt="" class="onface">
+            </div>
+
+            <div class="nav-right">
+                <div class="social-box"><img src="social media/insta.png" alt=""></div>
+                <div class="social-box"><img src="social media/face.png" alt=""></div>
+                <div class="social-box"><img src="social media/whatsapp.png" alt=""></div>
+              
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                   <span class="bar"></span>
+                   <span class="bar"></span>
+                   <span class="bar"></span>
+                </button>
+                <ul class="nav-links" id="nav-links">
+                   <li><a href="#">meu perfil</a></li>
+                   <li><a href="home.html">Home</a></li>
+                   <li><a href="#">Serviços</a></li>
+                   <li><a href="#">Contato</a></li>
+                </ul>
+
+
+            </div>
+        </header>
+
+        <div class="welcome-section">
+            <h1>OLÁ, ESTER CARDOZO</h1>
+            <p>O que vamos fazer hoje?</p>
+        </div>
+
+        <div class="menu-grid">
+            <div class="card">
+                <div class="white-square"><img src="icones perfil/listas.png" alt="" class="icone-perfil"></div>
+                <div class="label">Listas</div>
+            </div>
+            <div class="card">
+                <div class="white-square"><img src="icones perfil/turmas.png" alt=""class="icone-perfil"></div>
+                <div class="label">Turmas</div>
+            </div>
+            <div class="card">
+                <div class="white-square"><img src="icones perfil/horarios.png" alt="" class="icone-perfil"></div>
+                <div class="label">Horários</div>
+            </div>
+            <div class="card">
+                <div class="white-square"><img src="icones perfil/relatorios.png" alt="" class="icone-perfil"></div>
+                <div class="label">Relatórios</div>
+            </div>
+            <div class="card">
+                <div class="white-square"><img src="icones perfil/responsaveis.png" alt="" class="icone-perfil"></div>
+                <div class="label">Responsáveis</div>
+            </div>
+            <div class="card">
+                <div class="white-square"><img src="icones perfil/comunicados.png" alt="" class="icone-perfil"></div>
+                <div class="label">Comunicados</div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script>
+    const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+});
+
+</script>
+
+</body>
+</html>
