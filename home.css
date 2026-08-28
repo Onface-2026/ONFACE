@@ -381,63 +381,478 @@ gap:30px;
 
 
 /**  EQUIPE **/
-#equipe {
+
+
+
+
+* {
+    margin: 0;
     padding: 0;
-    margin-right: 0px;
-    align-items: center; 
-    color: white; 
+    box-sizing: border-box;
 }
 
-.container-team { 
-    background: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    #0a9ec6 25%,
-    #017697 65%,
-    #005b73 100%
-); 
-    padding: 60px 0; 
-    text-align: center; 
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   SEÇÃO PRINCIPAL
+===================================================== */
+
+.equipe-section {
     width: 100%;
+    min-height: 598px;
+
+    position: relative;
+    overflow: hidden;
+
+    padding-top: 62px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #f1f3f3 0%,
+            #dbe5e8 20%,
+            #85aab9 48%,
+            #236f85 75%,
+            #075066 100%
+        );
 }
 
-.team-grid {
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.titulo {
+    position: relative;
+    z-index: 10;
+
+    text-align: center;
+    line-height: 1;
+}
+
+
+.titulo span {
+    display: block;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    color: #343434;
+
+    margin-bottom: 2px;
+}
+
+
+.titulo h1 {
+    font-size: 44px;
+    font-weight: 800;
+
+    color: #17627a;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   FUNDO DE PONTOS
+===================================================== */
+
+.pontos {
+    position: absolute;
+
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(11, 69, 91, 0.9) 2px,
+            transparent 2.5px
+        );
+
+    background-size: 12px 12px;
+}
+
+
+/* Pontos superiores */
+
+.pontos-topo {
+    width: 370px;
+    height: 145px;
+
+    top: 0;
+    right: 0;
+
+    opacity: 0.9;
+
+    mask-image:
+        linear-gradient(
+            to bottom left,
+            black 30%,
+            transparent 85%
+        );
+}
+
+
+/* Pontos inferiores */
+
+.pontos-baixo {
+    width: 330px;
+    height: 150px;
+
+    bottom: -5px;
+    left: 0;
+
+    opacity: 0.75;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(210, 234, 240, 0.9) 2px,
+            transparent 2.5px
+        );
+
+    mask-image:
+        linear-gradient(
+            to top right,
+            black 30%,
+            transparent 90%
+        );
+}
+
+
+/* =====================================================
+   LINHAS SUPERIORES
+===================================================== */
+
+.conexoes-superiores {
+    position: absolute;
+
+    width: 100%;
+    height: 100px;
+
+    top: 130px;
+    left: 0;
+
+    z-index: 2;
+}
+
+
+/* LINHA BASE */
+
+.linha {
+    position: absolute;
+
+    height: 60px;
+
+    border-top: 3px dotted #202020;
+    border-right: 3px dotted #202020;
+}
+
+
+/* ESTER */
+
+.linha-ester {
+    width: 350px;
+
+    left: 16%;
+    top: 2px;
+}
+
+
+/* GUILHERME */
+
+.linha-guilherme {
+    width: 350px;
+
+    left: 50%;
+    top: 2px;
+
+    transform: translateX(-50%);
+}
+
+
+/* LUIS */
+
+.linha-luis {
+    width: 350px;
+
+    right: 16%;
+    top: 2px;
+}
+
+
+/* SETAS */
+
+.seta {
+    position: absolute;
+
+    bottom: -13px;
+    right: -10px;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: #1d1d1d;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   GRID DA EQUIPE
+===================================================== */
+
+.equipe-container {
+    position: relative;
+    z-index: 5;
+
+    width: min(92%, 940px);
+
+    margin: 68px auto 0;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    column-gap: 105px;
+    row-gap: 25px;
+
+    justify-items: center;
 }
 
-.member img { 
-    width: 160px; 
-    height: 200px;
-    border-radius: 15px; 
-    border: 3px solid #ddd; 
+
+/* =====================================================
+   MEMBRO
+===================================================== */
+
+.membro {
+    position: relative;
+
+    width: 245px;
+
+    text-align: center;
 }
 
-.equipe{
-    margin-left: 50px;
+
+/* =====================================================
+   CARD PRINCIPAL
+===================================================== */
+
+.card-principal {
+    width: 245px;
+    height: 108px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background: #0e637a;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 10px
+        rgba(0, 0, 0, 0.08);
 }
 
-.equip {
-    margin-left: 50px;
+
+/* FOTO */
+
+.card-principal img {
+    width: 108px;
+    height: 108px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    position: relative;
+    z-index: 2;
 }
 
-.member h4 { 
-    margin-top: 10px; 
-    color: white; 
-    font-size: 14px; 
+
+/* NOME */
+
+.nome {
+    flex: 1;
+
+    padding-left: 10px;
+    padding-right: 8px;
+
+    text-align: left;
+
+    color: #ffffff;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    line-height: 1.12;
+
+    letter-spacing: 0.5px;
 }
 
-.member p { 
-    font-size: 11px; 
-    color: #dbdbdb; 
+
+/* =====================================================
+   CARGO
+===================================================== */
+
+.cargo {
+    width: 196px;
+
+    min-height: 43px;
+
+    margin: 0 auto;
+
+    padding: 4px 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 1;
+
+    background:
+        rgba(153, 182, 191, 0.82);
+
+    border-radius:
+        0 0 8px 8px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    letter-spacing: 0.3px;
 }
 
-@media(max-width:768px){
-    .team-grid {
-        gap: 15px;
-        grid-template-columns: repeat(2, 1fr);
+
+/* =====================================================
+   LINHAS PONTILHADAS ENTRE OS CARDS
+===================================================== */
+
+.membro-ester::after,
+.membro-guilherme::after,
+.membro-luis::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 28px;
+
+    border-left:
+        3px dotted rgba(24, 42, 48, 0.85);
+
+    left: 50%;
+
+    bottom: -27px;
+
+    transform: translateX(-50%);
+}
+
+
+/* =====================================================
+   AJUSTES DE POSICIONAMENTO
+===================================================== */
+
+.membro-ester,
+.membro-guilherme,
+.membro-luis {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .titulo h1 {
+        font-size: 36px;
     }
+
+
+    .equipe-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 45px 40px;
+
+        margin-top: 80px;
+    }
+
+
+    .conexoes-superiores {
+        display: none;
+    }
+
+
+    .membro::after {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .equipe-section {
+        padding-top: 45px;
+        min-height: auto;
+        padding-bottom: 50px;
+    }
+
+
+    .titulo span {
+        font-size: 15px;
+    }
+
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+
+    .equipe-container {
+        grid-template-columns: 1fr;
+
+        width: 100%;
+
+        gap: 25px;
+
+        margin-top: 45px;
+    }
+
+
+    .membro {
+        width: 245px;
+    }
+
+
+    .pontos-topo {
+        width: 180px;
+    }
+
+
+    .pontos-baixo {
+        width: 180px;
+    }
+
 }
 
 
